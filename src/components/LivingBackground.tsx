@@ -16,8 +16,6 @@ export default function LivingBackground() {
   const bgX = useTransform(smoothX, [0, typeof window !== 'undefined' ? window.innerWidth : 1000], ["-10px", "10px"]);
   const bgY = useTransform(smoothY, [0, typeof window !== 'undefined' ? window.innerHeight : 1000], ["-10px", "10px"]);
   
-  const auroraX = useTransform(smoothX, [0, typeof window !== 'undefined' ? window.innerWidth : 1000], ["-25px", "25px"]);
-  const auroraY = useTransform(smoothY, [0, typeof window !== 'undefined' ? window.innerHeight : 1000], ["-25px", "25px"]);
   
   const cloudX = useTransform(smoothX, [0, typeof window !== 'undefined' ? window.innerWidth : 1000], ["-35px", "35px"]);
   const cloudY = useTransform(smoothY, [0, typeof window !== 'undefined' ? window.innerHeight : 1000], ["-15px", "15px"]);
