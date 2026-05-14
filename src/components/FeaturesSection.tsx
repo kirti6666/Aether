@@ -75,7 +75,7 @@ export default function FeaturesSection() {
       <div ref={ref} className="max-w-4xl mx-auto relative z-10 flex flex-col items-center">
         <motion.div custom={0} initial="hidden" animate={isInView ? 'visible' : 'hidden'} variants={fadeUp} className="text-center mb-14">
           <span className="section-badge">The Craft</span>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl text-white tracking-[-0.04em] leading-[0.92] mt-6" style={{ fontFamily: '"Instrument Serif", serif', fontStyle: 'italic' }}>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl tracking-[-0.04em] leading-[1.1] text-white mt-6" style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic' }}>
             Tailored with beauty <br /> and comfort in balance.
           </h2>
         </motion.div>
@@ -104,8 +104,8 @@ export default function FeaturesSection() {
                   }}
                 >
                   <h3 
-                    className="text-white text-4xl md:text-5xl tracking-[-0.02em] leading-tight"
-                    style={{ fontFamily: '"Instrument Serif", serif', fontStyle: 'italic' }}
+                    className="text-white text-apple-h3"
+                    style={{ fontFamily: '"Inter", sans-serif' }}
                   >
                     {card.title}
                   </h3>

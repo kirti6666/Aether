@@ -50,7 +50,7 @@ export default function CTASection() {
       el.style.backdropFilter = 'blur(16px)';
       el.style.color = '#fafafa';
       el.style.fontSize = '1.65rem';
-      el.style.fontFamily = '"Instrument Serif", serif';
+      el.style.fontFamily = '"Playfair Display", serif';
       el.style.fontStyle = 'italic';
       el.style.letterSpacing = '0.02em';
       el.style.textShadow = '0 2px 10px rgba(255, 255, 255, 0.15)';
@@ -110,6 +110,10 @@ export default function CTASection() {
 
   return (
     <section ref={ref} className="bg-black py-28 md:py-40 px-6 relative overflow-hidden cursor-crosshair">
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <img src="/wardrobe-bg.jpg" alt="Wardrobe Background" className="w-full h-full object-cover opacity-40" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/80" />
+      </div>
       <div className="max-w-3xl mx-auto text-center flex flex-col items-center relative z-10 pointer-events-none">
         <motion.span
           custom={0} initial="hidden" animate={isInView ? 'visible' : 'hidden'} variants={fadeUp}
@@ -120,15 +124,15 @@ export default function CTASection() {
 
         <motion.h2
           custom={1} initial="hidden" animate={isInView ? 'visible' : 'hidden'} variants={fadeUp}
-          className="text-5xl md:text-6xl lg:text-7xl text-white tracking-[-0.04em] leading-[0.9] mt-6"
-          style={{ fontFamily: '"Instrument Serif", serif', fontStyle: 'italic' }}
+          className="text-5xl md:text-6xl lg:text-7xl tracking-[-0.04em] leading-[1.1] text-white mt-6"
+          style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic' }}
         >
           Your new wardrobe <br /> starts here.
         </motion.h2>
 
         <motion.p
           custom={2} initial="hidden" animate={isInView ? 'visible' : 'hidden'} variants={fadeUp}
-          className="text-[1.05rem] text-white/70 font-light max-w-md mx-auto mt-8 mb-10 leading-relaxed"
+          className="text-apple-p text-white/70 max-w-md mx-auto mt-8 mb-10"
         >
           Explore the latest collection and elevate your daily aesthetic.
         </motion.p>

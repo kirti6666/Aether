@@ -125,10 +125,10 @@ export default function HorizontalCardsSection() {
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <div className="text-center z-20 w-full px-6 flex-shrink-0 mb-12">
-        <h2 className="text-4xl md:text-5xl lg:text-6xl text-white tracking-tight" style={{ fontFamily: '"Instrument Serif", serif', fontStyle: 'italic' }}>
+        <h2 className="text-5xl md:text-6xl lg:text-7xl tracking-[-0.04em] leading-[1.1] text-white" style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic' }}>
           The World of Aether
         </h2>
-        <p className="mt-4 text-[#9ca3af] font-light text-sm tracking-widest uppercase">
+        <p className="mt-4 text-[#9ca3af] text-apple-label">
           You imagine it, We shape it
         </p>
       </div>
@@ -181,7 +181,7 @@ export default function HorizontalCardsSection() {
                 </div>
 
                 {/* Large Faint Number */}
-                <div className="absolute bottom-4 right-4 pointer-events-none select-none text-[#111] font-['Instrument_Serif'] italic leading-none tracking-tighter z-0">
+                <div className="absolute bottom-4 right-4 pointer-events-none select-none text-[#111] leading-none tracking-tighter z-0" style={{ fontFamily: '"Playfair Display", serif', fontStyle: 'italic' }}>
                   <span style={{ fontSize: isCenter ? '6rem' : '4rem', opacity: 0.15, color: '#fff', transition: 'font-size 0.5s ease' }}>
                     {card.num}
                   </span>
@@ -190,13 +190,24 @@ export default function HorizontalCardsSection() {
                 {/* Content */}
                 <div className="relative z-10 flex flex-col items-start w-[75%] p-4 md:p-5 flex-1 justify-center">
                   <div className="w-full">
-                    <h3 className="text-white text-xl md:text-2xl font-['Instrument_Serif'] italic tracking-[0.05em] mb-1">
-                      {card.title}
+                    <h3 className="text-white text-apple-h3 mb-1 flex overflow-hidden">
+                      {card.title.split("").map((char, charIndex) => (
+                        <motion.span
+                          key={charIndex}
+                          initial={{ y: 20, opacity: 0 }}
+                          animate={{ y: isCenter ? 0 : 20, opacity: isCenter ? 1 : 0 }}
+                          transition={{ duration: 0.4, delay: charIndex * 0.04, ease: "easeOut" }}
+                          style={{ display: "inline-block" }}
+                        >
+                          {char === " " ? "\u00A0" : char}
+                        </motion.span>
+                      ))}
                     </h3>
 
                     <motion.p 
-                      className="text-[#9ca3af] text-[0.8rem] leading-[1.4] font-light line-clamp-2"
+                      className="text-[#9ca3af] text-[15px] leading-[1.6] font-normal line-clamp-2 mt-2"
                       animate={{ opacity: isCenter ? 1 : 0.6 }}
+                      style={{ fontFamily: '"Inter", sans-serif' }}
                     >
                       {card.body}
                     </motion.p>
@@ -204,7 +215,7 @@ export default function HorizontalCardsSection() {
 
                   {card.button && (
                     <motion.button 
-                      className="mt-2 text-[#f9a8d4] text-[10px] tracking-wider uppercase font-medium hover:text-white transition-colors duration-300"
+                      className="mt-1 text-[#f9a8d4] text-[11px] tracking-wider uppercase font-medium hover:text-white transition-colors duration-300"
                       animate={{ opacity: isCenter ? 1 : 0 }}
                     >
                       {card.button}

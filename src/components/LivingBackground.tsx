@@ -66,21 +66,19 @@ export default function LivingBackground() {
   return (
     <div ref={containerRef} className="absolute inset-0 z-0 overflow-hidden bg-black pointer-events-none">
       
-      {/* 0. Base Image with subtle parallax */}
+      {/* 0. Base Video with subtle parallax */}
       <motion.div style={{ x: bgX, y: bgY }} className="absolute -inset-10">
-        <img
-          src="/hero-bg.jpg"
-          alt="Hero Background"
+        <video
+          src="/upscaled-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
           className="w-full h-full object-cover opacity-60"
         />
       </motion.div>
 
-      {/* 1. Aurora / Northern Lights */}
-      <motion.div style={{ x: auroraX, y: auroraY }} className="absolute inset-0 opacity-45">
-        <div className="aurora-blob" style={{ background: 'radial-gradient(circle, rgba(13,148,136,0.8) 0%, transparent 60%)', animationDelay: '0s', left: '10%', top: '-10%' }} />
-        <div className="aurora-blob" style={{ background: 'radial-gradient(circle, rgba(22,163,74,0.8) 0%, transparent 60%)', animationDelay: '-5s', left: '40%', top: '-20%' }} />
-        <div className="aurora-blob" style={{ background: 'radial-gradient(circle, rgba(124,58,237,0.8) 0%, transparent 60%)', animationDelay: '-10s', left: '70%', top: '-10%' }} />
-      </motion.div>
+      {/* 1. Aurora / Northern Lights - Removed per user request */}
 
       {/* 3. Drifting Clouds */}
       <motion.div style={{ x: cloudX, y: cloudY }} className="absolute inset-0 opacity-40">

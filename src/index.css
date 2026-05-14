@@ -173,7 +173,7 @@
   position: absolute;
   inset: -2px;
   border-radius: inherit;
-  background: conic-gradient(from 0deg, transparent 60%, #4169E1 100%);
+  background: conic-gradient(from 0deg, transparent 60%, #6B3F1E 100%);
   animation: border-sweep 3s linear infinite;
   z-index: -2;
   opacity: 0.8;
@@ -192,7 +192,7 @@
 .hero-primary-btn .hover-fill {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #4169E1 0%, #2563EB 100%);
+  background: linear-gradient(135deg, #6B3F1E 0%, #502F16 100%);
   opacity: 0;
   z-index: -1;
   transition: opacity 0.4s ease;
@@ -215,7 +215,7 @@
   transform: scale(1.05);
   color: white !important;
   border-color: transparent;
-  box-shadow: 0 0 20px rgba(65, 105, 225, 0.5);
+  box-shadow: 0 0 20px rgba(107, 63, 30, 0.5);
 }
 
 .hero-primary-btn:hover::after {
@@ -259,16 +259,16 @@
   left: 20px;
   right: 20px;
   height: 1px;
-  background: #4169E1;
+  background: #D5C0A9;
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.4s ease;
-  box-shadow: 0 0 8px rgba(65, 105, 225, 0.5);
+  box-shadow: 0 0 8px rgba(213, 192, 169, 0.5);
 }
 
 .hero-secondary-btn:hover {
-  color: #4169E1 !important;
-  text-shadow: 0 0 10px rgba(65, 105, 225, 0.3);
+  color: #D5C0A9 !important;
+  text-shadow: 0 0 10px rgba(213, 192, 169, 0.3);
 }
 
 .hero-secondary-btn:hover .btn-text {
@@ -293,14 +293,14 @@
 
 .hero-badge-container:hover {
   transform: scale(1.03);
-  box-shadow: 0 0 25px rgba(65, 105, 225, 0.4), inset 0 0 10px rgba(65, 105, 225, 0.1);
-  border-color: rgba(65, 105, 225, 0.5);
+  box-shadow: 0 0 25px rgba(107, 63, 30, 0.4), inset 0 0 10px rgba(107, 63, 30, 0.1);
+  border-color: rgba(107, 63, 30, 0.5);
 }
 
 .hero-badge-container:hover .badge-new-tag {
-  background: linear-gradient(135deg, #4169E1, #60A5FA);
+  background: linear-gradient(135deg, #6B3F1E, #8A5026);
   color: white;
-  box-shadow: 0 0 10px rgba(65, 105, 225, 0.4);
+  box-shadow: 0 0 10px rgba(107, 63, 30, 0.4);
 }
 
 .badge-new-tag {
@@ -311,8 +311,8 @@
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background-color: #4169E1;
-  box-shadow: 0 0 8px #4169E1;
+  background-color: #6B3F1E;
+  box-shadow: 0 0 8px #6B3F1E;
   animation: heartbeat 1.5s infinite ease-in-out;
 }
 
